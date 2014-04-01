@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finalproject</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="row-fluid">   
+		<div class="span10 offset1">
+			<div class="container">     
+				<div class="jumbotron text-center">       
+					<h1>Calendar</h1>       
+						<p>Welcome! </p>     
+				</div> 
+			</div>  
+		</div> 
+	</div> 
+	<div class="row-fluid">
+		<div class="span4 offset4">
+			<%= yield %>
+		</div>
+	</div>
+	<br />
+	<div id ="wrap">
+		<div id="main" class="container clear-top">
+		<p>Thanh Trinh</p>
+		</div>
+	</div>
+
+</body>
+</html>
