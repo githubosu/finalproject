@@ -11,7 +11,7 @@
 		<div class="span10 offset1">
 			<div class="container">     
 				<div class="jumbotron text-center">       
-					<h1>Calendar</h1>       
+					<h1>Calendar</h1> <br />      
 						<p>Welcome! <strong><%= current_user.email %></strong> |
 					<%= link_to 'logout', destroy_user_session_path, :method => 'delete' %></p>     
 				</div> 
@@ -21,11 +21,13 @@
 
 <%= yield %>
 <br />
-<div id ="wrap">
-	<div id="main" class="container clear-top">
-	<p>Thanh Trinh</p>
-	</div>
-</div>
+<div id="footer" class="container">
+        <div class="navbar navbar-dafault">
+            <div class="navbar-inner navbar-content-center">
+            <p class="text-muted credit text-center"> Team Rocket | Thanh | Sean | Harry | Yuxin | Kate</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
