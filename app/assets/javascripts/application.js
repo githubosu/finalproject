@@ -23,12 +23,13 @@ $(function(){
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'month,basicWeek,basicDay',
+            right: 'agendaWeek,agendaDay',
             ignoreTimezone: false
         },
         selectable: true,
         selectHelper: true,
         editable: true,
-        events: 'events'
+        events: 'events',
+        defaultView: 'agendaWeek'
     });
 });
