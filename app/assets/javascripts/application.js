@@ -23,7 +23,7 @@ $(function(){
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'agendaWeek,agendaDay',
+            right: 'month,agendaWeek,agendaDay',
             ignoreTimezone: false
         },
         selectable: true,
@@ -32,4 +32,5 @@ $(function(){
         events: 'events',
         defaultView: 'agendaWeek'
     });
+    
 });
