@@ -17,19 +17,3 @@
 //= require bootstrap
 //= require fullcalendar
 //= require_tree .
-
-$(function(){
-    $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'agendaWeek,agendaDay',
-            ignoreTimezone: false
-        },
-        selectable: true,
-        selectHelper: true,
-        editable: true,
-        events: 'events',
-        defaultView: 'agendaWeek'
-    });
-});

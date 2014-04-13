@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+    has_many :events
+
 TEMP_EMAIL = 'change@me.com'
   TEMP_EMAIL_REGEX = /change@me.com/
   # Include default devise modules. Others available are:
