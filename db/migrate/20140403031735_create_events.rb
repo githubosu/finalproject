@@ -3,8 +3,9 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
       t.string :title
       t.string :color
-      t.datetime :start
-      t.datetime :end
+      t.date :date
+      t.time :start
+      t.time :end
 
       t.timestamps
     end
