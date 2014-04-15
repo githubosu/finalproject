@@ -10,14 +10,15 @@ class EventsController < ApplicationController
 
 
 	def create
-		@event = Event.new(params[:event])
+		@event = Event.new(event_params)
 
 		@event.save
-		redirect_to @event
+
+		redirect_to events_path
 	end
 
 	private
 		def event_params
-			params.require(:article).permit(:title, :text)
+			params.require(:event).permit(:title, :color, :start, :end)
 		end
 end
