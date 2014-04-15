@@ -15,8 +15,10 @@
 				<div class="jumbotron text-center">       
 					<h1>Calendar</h1> <br />      
 						<p>Welcome! <strong><%= current_user.email %></strong> |
-					<%= link_to 'logout', destroy_user_session_path, :method => 'delete' %></p>     
+					<%= link_to 'logout', destroy_user_session_path, :method => 'delete' %>   
+					 </p> 
 				</div> 
+				<%=  link_to 'Create New Event',events_new_path %>
 			</div>  
 	</div> 
 </div> 

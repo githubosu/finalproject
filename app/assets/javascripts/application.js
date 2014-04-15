@@ -17,3 +17,4 @@
 //= require bootstrap
 //= require fullcalendar
 //= require_tree .
+//= require bootstrap-datepicker
