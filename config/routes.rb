@@ -1,7 +1,5 @@
 Finalproject::Application.routes.draw do
 
-  root to: 'events#index'
-
   devise_for :users , :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   root to: 'events#index'
   resources :events
