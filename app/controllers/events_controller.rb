@@ -26,6 +26,7 @@ end
     event.title = params[:title]
     event.start = params[:start]
     event.end = params[:end]
+    event.allday =params[:allday]
     event.user = current_user
     event.save
     render text: "someString"
@@ -35,7 +36,7 @@ end
 
 private
 def event_params
-	params.require(:event).permit(:title, :color, :start, :end, :commit)
+	params.require(:event).permit(:title, :color, :start, :end, :allday, :commit)
 end
 
 

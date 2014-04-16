@@ -26,8 +26,7 @@ $(document).ready(function(){
                             {
                                 title: title,
                                 start: start,
-                                end: end,
-                                allDay: allDay
+                                end: end
                             },
                             true 
                         );

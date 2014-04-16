@@ -13,7 +13,8 @@
  *= require fullcalendar
  *= require fullcalendar.print
  *= require_tree .
- *= require bootstrap-datepicker3
+ *= require bootstrap
+ *= require bootstrap-datetimepicker
  */
 
  @import 'bootstrap';

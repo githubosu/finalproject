@@ -1,24 +1,32 @@
 <div class="container">
 	<%= form_for :event do |f| %>
-  <p>
-    <%= f.label :New_Event %><br>
+  <div>
+    <%= f.label :New_Event %>
     <%= f.text_field :title %>
-  </p>
+  </div>
  
   <p>
-    <%= f.label :Color %><br>
+    <%= f.label :Color %>
     <%= f.text_field :color %>
   </p>
  
  <p>
  	<%= f.label :Start %>
- 	<%= f.text_field :start %>
+ 	<%= f.datetime_field :start, class: "datetimepicker1", 'data-format' => 'yyyy-MM-dd HH:mm:ss' %>
+
  </p>
 
 <p>
  	<%= f.label :End %>
- 	<%= f.text_field :end %>
+ 	<%= f.datetime_field :end, class: 'datetimepicker2', 'data-format' => 'yyyy-MM-dd HH:mm:ss' %>
+
+  
  </p>
+
+  <p> 
+      <%= f.label :All_Day %>
+      <%= f.check_box :allday %>
+  </p>
 
   <p>
     <%= f.submit %>
@@ -27,3 +35,9 @@
 
 <%= link_to 'Back', events_path %>
 </div>
+
+<script type="text/javascript">
+  $(function(){
+    $('.datetimepicker1 ,.datetimepicker2').datetimepicker({});
+  });
+  </script>
