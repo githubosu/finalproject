@@ -4,6 +4,7 @@ Finalproject::Application.routes.draw do
   root to: 'events#index'
   resources :events
   match '/events/new' , to: 'events#create' , via: :post
+  post "data/event" => 'events#save'
 
   #root to: 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.

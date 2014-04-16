@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
 def index
-	@event = Event.all
+	@events = Event.all
 end
 
 def new
@@ -20,6 +20,16 @@ def create
 		render "new"
 	end	
 end
+
+  def save
+    event = Event.new
+    event.title = params[:title]
+    event.start = params[:start]
+    event.end = params[:end]
+    event.user = current_user
+    event.save
+    render text: "someString"
+  end
 
 
 

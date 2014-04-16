@@ -31,6 +31,8 @@ $(document).ready(function(){
                             },
                             true 
                         );
+                        
+                        $.post("data/event", {title: title, start: start, end: end});
                     }
                     calendar.fullCalendar('unselect');
                 },
@@ -39,5 +41,18 @@ $(document).ready(function(){
         editable: true,
         events: 'events',
         defaultView: 'agendaWeek'
+    });
+    $("#events > div").each(function(index) {
+        var start = $(this).find(".start").text();
+        var end = $(this).find(".end").text();
+        var title = $(this).find(".title").text();
+        calendar.fullCalendar('renderEvent',
+            {
+                title: title,
+                start: start,
+                end: end
+            },
+            true 
+        );
     });
 });
